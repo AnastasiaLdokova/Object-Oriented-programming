@@ -3,7 +3,17 @@ package ru.netology;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
 public class RadioTest {
+    @Test
+    public void stationsConstructor() {
+        Radio radio = new Radio(60);
+        radio.setCurrentStation(13);
+        int expected = 13;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+
+    }
 
     @Test
     public void midCurrentStation() {
